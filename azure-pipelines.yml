@@ -44,7 +44,7 @@ steps:
     arguments: '--no-restore --configuration Release'
     projects: '**/*.csproj'
 - task: DotNetCoreCLI@2
-    displayName: 'Publish the project - Release'
+  displayName: 'Publish the project - Release'
     inputs:
      command: 'publish'
      projects: '**/*.csproj'
@@ -53,5 +53,5 @@ steps:
      zipAfterPublish: true
 
 - task: PublishBuildArtifacts@1
-    displayName: 'Publish Artifact: drop'
+  displayName: 'Publish Artifact: drop'
     condition: succeeded()
